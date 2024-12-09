@@ -9,6 +9,8 @@ export default class Ficha extends BaseModel {
   public name: string
 
   @column()
+  public cpf: string
+  @column()
   public idade: number
 
   @column()
@@ -18,13 +20,19 @@ export default class Ficha extends BaseModel {
   public telefone: string
 
   @column()
+  public profissao: string
+
+  @column()
   public endereco: string
 
   @column()
   public sexo: number
 
   @column()
-  public queixa_principal: boolean
+  public queixa_principal: string
+
+  @column()
+  public diagnostico: string
 
   @column()
   public hma: string

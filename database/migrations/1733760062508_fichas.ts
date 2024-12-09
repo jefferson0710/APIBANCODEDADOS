@@ -1,6 +1,6 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Fichas extends BaseSchema {
+export default class extends BaseSchema {
   protected tableName = 'fichas'
 
   public async up() {
@@ -11,8 +11,11 @@ export default class Fichas extends BaseSchema {
       table.string('cns').notNullable().unique()// CNS
       table.string('telefone') // Telefone
       table.string('endereco') // Endereço
+      table.string('profissao')
+      table.string('diagnostico')
+      table.string('cpf').notNullable().unique() // CPF
       table.tinyint('sexo') // Sexo (pode ser representado como tinyint)
-      table.boolean('queixa_principal') // Queixa Principal
+      table.string('queixa_principal') // Queixa Principal
       table.text('hma').notNullable() // HMA (História da Molécula A)
       table.text('historico_familiar').notNullable() // Histórico Familiar
       table.boolean('atividade_fisica').notNullable() // Atividade Física

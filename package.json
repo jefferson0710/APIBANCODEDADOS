@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
-    "start": "node build/server.js", // Aponte para a versão compilada em 'build/'
+    "start": "node build/server.js",
     "test": "node ace test"
   },
   "devDependencies": {
@@ -24,11 +24,6 @@
     "@adonisjs/core": "^5.8.0",
     "@adonisjs/lucid": "18.4.0",
     "@adonisjs/repl": "^3.1.0",
-    "@supabase": "supabase/supabase-js",
-    "luxon": "^3.5.0",
-    "pg": "^8.13.1",
-    "proxy-addr": "^2.0.7",
-    "reflect-metadata": "^0.2.2",
-    "source-map-support": "^0.5.21"
+    "@supabase/supabase-js": "^2.0.0"
   }
 }

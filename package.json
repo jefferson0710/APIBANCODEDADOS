@@ -2,13 +2,10 @@
   "name": "ultimavezpt2",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "dev": "node ace serve --watch",
-    "start": "node build/server.js",
     "build": "node ace build --production",
+    "start": "node build/server.js",
     "test": "node ace test"
   },
   "devDependencies": {

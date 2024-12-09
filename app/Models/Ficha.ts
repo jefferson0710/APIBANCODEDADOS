@@ -3,73 +3,65 @@ import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Ficha extends BaseModel {
   @column({ isPrimary: true })
-  public id: number
+  public id!: number
 
   @column()
-  public name: string
+  public name!: string
 
   @column()
-  public cpf: string
-  @column()
-  public idade: number
+  public idade!: number
 
   @column()
-  public cns: string
+  public cns!: string
 
   @column()
-  public telefone: string
+  public telefone!: string
 
   @column()
-  public profissao: string
+  public endereco!: string
 
   @column()
-  public endereco: string
+  public sexo!: number
 
   @column()
-  public sexo: number
+  public queixa_principal!: string
 
   @column()
-  public queixa_principal: string
+  public hma!: string
 
   @column()
-  public diagnostico: string
+  public historico_familiar!: string
 
   @column()
-  public hma: string
+  public atividade_fisica!: boolean
 
   @column()
-  public historico_familiar: string
+  public vezes!: string
 
   @column()
-  public atividade_fisica: boolean
+  public alcool!: boolean
 
   @column()
-  public vezes: string
+  public fuma!: boolean
 
   @column()
-  public alcool: boolean
+  public tarefa!: boolean
 
   @column()
-  public fuma: boolean
+  public pa!: string
 
   @column()
-  public tarefa: boolean
+  public altura!: string
 
   @column()
-  public pa: string
+  public eav!: string
 
   @column()
-  public altura: string
-
-  @column()
-  public eav: string
-
-  @column()
-  public dados_complementares: string
+  public dados_complementares!: string
 
   @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime
+  public createdAt!: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime
+  public updatedAt!: DateTime
 }

@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./UsersController.ts",
+      "src": "src/server.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "(.*)",
-      "dest": "./UsersController.ts"
+      "dest": "./server.ts"
     }
   ]
 }

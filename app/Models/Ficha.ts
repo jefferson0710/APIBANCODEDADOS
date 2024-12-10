@@ -9,6 +9,10 @@ export default class Ficha extends BaseModel {
   public name!: string
 
   @column()
+  public cpf!: string
+
+
+  @column()
   public idade!: number
 
   @column()

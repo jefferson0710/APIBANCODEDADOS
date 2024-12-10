@@ -44,8 +44,7 @@ const corsConfig: CorsConfig = {
   |                     one of the above values.
   |
   */
-  origin: ['https://6757956847956c4f46cb7012--bespoke-sherbet-1dc19c.netlify.app',
-    'projeto-tcc-n3h6.vercel.app'],
+  origin: ['http://localhost:4200'],
 
 
   /*

@@ -11,12 +11,17 @@ export default class Ficha extends BaseModel {
   @column()
   public cpf!: string
 
+  @column()
+  public profissao!: string
 
   @column()
   public idade!: number
 
   @column()
   public cns!: string
+
+  @column()
+  public diagnostico!: string
 
   @column()
   public telefone!: string

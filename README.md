@@ -2,7 +2,6 @@
 
 Esta API foi desenvolvida como parte do projeto de TCC para gerenciar formulários de anamnese voltados para a fisioterapia. Utilizando o framework AdonisJS, a aplicação busca otimizar o processo de coleta e organização de dados de pacientes, proporcionando maior eficiência e redução de erros no atendimento.
 
-
 ## Funcionalidades
 
 - **Cadastro de Pacientes**: Armazena informações básicas dos pacientes.
@@ -13,9 +12,10 @@ Esta API foi desenvolvida como parte do projeto de TCC para gerenciar formulári
 ## Tecnologias Utilizadas
 
 - **Back-end**: AdonisJS
-- **Banco de Dados**: MySQL
+- **Banco de Dados**: Supabase
 - **Autenticação**: JWT
 - **Linguagem**: TypeScript
+- **Hospedagem**: Vercel
 
 ## Pré-requisitos
 
@@ -23,7 +23,6 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
 
 - [Node.js](https://nodejs.org/)
 - [AdonisJS CLI](https://docs.adonisjs.com/guides/installation)
-- [MySQL](https://www.mysql.com/)
 
 ## Instalação
 
@@ -45,14 +44,13 @@ cd repo-tcc-api
 npm install
 ```
 
-4. Configure o arquivo `.env` com suas credenciais do banco de dados:
+4. Configure o arquivo `.env` com suas credenciais do Supabase:
 
 ```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
+DB_CONNECTION=supabase
+DB_HOST=sua_url_do_supabase
+DB_USER=sua_chave_publica
+DB_PASSWORD=sua_chave_secreta
 DB_DATABASE=nome_do_banco
 APP_KEY=sua_chave_secreta
 ```
@@ -71,17 +69,23 @@ node ace migration:run
 npm run dev
 ```
 
-2. Acesse a API em `http://127.0.0.1:3333`.
+2. Acesse a API em `http://127.0.0.1:3333` ou, se estiver em produção, no URL fornecido pela Vercel.
 
 ## Rotas Principais
+ **GET /fichas/**: Listar todas as fichas.
+- **POST /fichas/**: Criar uma nova ficha.
+- **GET /fichas/:id**: Visualizar uma ficha específica.
+- **PUT /fichas/:id**: Atualizar uma ficha específica.
+- **DELETE /fichas/:id**: Excluir uma ficha específica.
 
-- **POST /patients**: Cadastrar paciente.
-- **GET /patients**: Listar pacientes.
-- **POST /anamneses**: Criar formulário de anamnese.
-- **GET /anamneses**: Listar formulários de anamnese.
-- **PUT /anamneses/:id**: Atualizar formulário de anamnese.
-- **DELETE /anamneses/:id**: Remover formulário de anamnese.
+### Rotas para Usuários
 
+- **GET /users/**: Listar todos os usuários.
+- **POST /users/**: Criar um novo usuário.
+- **GET /users/:id**: Visualizar um usuário específico.
+- **PUT /users/:id**: Atualizar um usuário específico.
+- **DELETE /users/:id**: Excluir um usuário específico.
+- **GET /users/pacientes/:cpf**: Buscar um paciente pelo CPF.
 ## Contribuição
 
 Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
@@ -106,7 +110,6 @@ git push origin minha-nova-feature
 ```
 
 5. Abra um Pull Request.
-
 
 
 **Desenvolvido por:** [Jefferson Nascimento Souza]

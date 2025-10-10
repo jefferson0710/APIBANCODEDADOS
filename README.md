@@ -88,28 +88,7 @@ npm run dev
 - **GET /users/pacientes/:cpf**: Buscar um paciente pelo CPF.
 ## Contribuição
 
-Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
-
-1. Faça um fork do repositório.
-2. Crie uma nova branch para sua funcionalidade ou correção:
-
-```bash
-git checkout -b minha-nova-feature
-```
-
-3. Commit suas alterações:
-
-```bash
-git commit -m "Adiciona nova funcionalidade"
-```
-
-4. Faça o push para a branch:
-
-```bash
-git push origin minha-nova-feature
-```
-
-5. Abra um Pull Request.
+Contribuições são bem-vindas! 
 
 
 **Desenvolvido por:** [Jefferson Nascimento Souza]
